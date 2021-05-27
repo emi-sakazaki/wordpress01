@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 <head>
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<title>rental space MdN</title>
-	<meta name="description" content="レンタルスペースMdNの公式ホームページです。">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/flex.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/scroll.js"></script>
 	<?php wp_head(); ?>
 </head>
