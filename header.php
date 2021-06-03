@@ -4,8 +4,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<script src="<?php echo get_template_directory_uri(); ?>/js/scroll.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body>
