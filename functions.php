@@ -1,6 +1,12 @@
 <?php
 function theme_setup() {
 	add_theme_support( 'title-tag' );//WordPress上のタイトルタグを取得する
+
+	add_theme_support( 'custom-logo' );//WordPress上のロゴを取得する
+
+	register_nav_menus( array(
+		'global' => 'Global Menu'
+	) );//WordPress上にメニューを追加
 }
 add_action( 'after_setup_theme', 'theme_setup' );//WordPressの設定が終わったら、自分が用意した関数を実行し、表示※順番が大事
 
@@ -12,7 +18,7 @@ function theme_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_styles' );//woedPressが用意したCSSのあとに自分のCSSを実行
 
 function theme_scripts() {
-	wp_deregister_script( 'jquery' );
+	wp_deregister_script( 'jquery' );//WordPress上の不要なJavaScriptを削除
 	wp_deregister_script( 'jquery-migrate' );
 
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '1.0.0', true );
