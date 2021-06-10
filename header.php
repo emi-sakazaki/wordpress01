@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta charset="<?php esc_attr( bloginfo( 'charset' ) ); ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<?php wp_head(); ?>
@@ -9,7 +9,17 @@
 <body>
 	<header>
 		<div class="logo-area">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/site-logo_bk.svg" alt="rental space MdN">
+			<?php
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$image          = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+			
+			$html  = '<image src="' . $image[0] . '"';
+			$html .= ' width="' . $image[1] . '"';
+			$html .= ' height="' . $image[2] . '"';
+			$html .= ' alt="' . esc_attr( get_bloginfo( 'name' ) ) . '"';
+			$html .= '>';
+			echo $html;
+			?><!--画像のロゴデータを取りに行く、idも必ず確認すること、サイズを要指定-->
 		</div>
 		<nav class="sp-only">
 			<div class="gnav-toggle">
