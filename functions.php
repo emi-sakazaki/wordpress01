@@ -6,7 +6,7 @@ function theme_setup() {
 
 	register_nav_menus( array(
 		'global' => 'Global Menu'
-	) );//WordPress上にメニューを追加
+	) );//※よく使う※WordPress上にメニューを追加、左システム、右管理画面
 }
 add_action( 'after_setup_theme', 'theme_setup' );//WordPressの設定が終わったら、自分が用意した関数を実行し、表示※順番が大事
 
