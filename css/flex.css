@@ -456,6 +456,10 @@ h1 {
   margin: 0;
 }
 
+.l-form .wpcf7-list-item.first {
+	margin-left: 0;
+}
+
 .submit-btn {
   margin: 0 auto 50px;
 }
