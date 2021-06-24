@@ -149,64 +149,23 @@
 					以下のドメインを受信できるように設定をお願いいたします。<br>
 					<span class="txt-lead">@example.com</span>
 				</p>
-				<form action="#" method="POST">
-					<table class="l-form">
-						<tr>
-							<th>企業名</th>
-							<td><input type="text" name="company" placeholder="例）株式会社〇〇"></td>
-						</tr>
-						<tr>
-							<th class="required">氏名</th>
-							<td><input type="text" name="name" required placeholder="例）山田太郎"></td>
-						</tr>
-						<tr>
-							<th>電話番号</th>
-							<td><input type="tel" name="tel" placeholder="例）0000000000（ハイフンなし）"></td>
-						</tr>
-						<tr>
-							<th class="required">メールアドレス</th>
-							<td><input type="email" name="email" required placeholder="例）info@example.com"></td>
-						</tr>
-						<tr>
-							<th class="required">お問い合わせ項目</th>
-							<td>
-								<ul>
-									<li>
-										<input type="radio" name="kind" value="サービスについて" id="kind_01">
-										<label for="kind_01">サービスについて</label>
-									</li>
-									<li>
-										<input type="radio" name="kind" value="プランについて" id="kind_02">
-										<label for="kind_02">プランについて</label>
-									</li>
-									<li>
-										<input type="radio" name="kind" value="その他" id="kind_03">
-										<label for="kind_03">その他</label>
-									</li>
-								</ul>
-							</td>
-						<tr>
-						</tr>
-							<th class="required">お問い合わせ内容</th>
-							<td><textarea name="detail" cols="40" rows="10" required></textarea></td>
-						</tr>
-					</table>
-					<div class="submit-btn">
-						<input type="submit" value="同意して送信する">
-					</div>
-					<div class="contact-policy">
-						<h4>個人情報の取扱について</h4>
-						<p>
-							この「お問い合せ・資料請求」でご提供いただく個人情報は、資料送付等の目的で利用します。<br>
-							本人の意思によりご提供いただけない部分がある場合、手続き・サービス等に支障が生じることがあります。<br>
-							本人の同意がある場合または法令に基づく場合を除き、取得した個人情報を第三者に提供することはありません。<br>
-							本人からの求めにより、当社が本件により取得した開示対象個人情報の利用目的の通知・開示・内容の訂正・追加または削除・利用の停止・消去および第三者への提供の停止に応じます。<br>
-							保有する個人情報を当社の厳正な管理の下で保管し、目的達成後の適切な時期に安全に廃棄いたします。<br>
-							個人情報に関するお問い合わせは、個人情報お問い合わせ窓口（0000-00-0000、日祝日・年末年始を除く、10時～17時）にて承ります。<br>
-							個人情報保護管理責任者
-						</p>
-					</div>
-				</form>
+				<?php
+				if ( shortcode_exists( 'contact-form-7' ) ) {
+					echo do_shortcode( '[contact-form-7 id="16" title="コンタクトフォーム 1"]' );
+				}
+				?>
+				<div class="contact-policy">
+					<h4>個人情報の取扱について</h4>
+					<p>
+						この「お問い合せ・資料請求」でご提供いただく個人情報は、資料送付等の目的で利用します。<br>
+						本人の意思によりご提供いただけない部分がある場合、手続き・サービス等に支障が生じることがあります。<br>
+						本人の同意がある場合または法令に基づく場合を除き、取得した個人情報を第三者に提供することはありません。<br>
+						本人からの求めにより、当社が本件により取得した開示対象個人情報の利用目的の通知・開示・内容の訂正・追加または削除・利用の停止・消去および第三者への提供の停止に応じます。<br>
+						保有する個人情報を当社の厳正な管理の下で保管し、目的達成後の適切な時期に安全に廃棄いたします。<br>
+						個人情報に関するお問い合わせは、個人情報お問い合わせ窓口（0000-00-0000、日祝日・年末年始を除く、10時～17時）にて承ります。<br>
+						個人情報保護管理責任者
+					</p>
+				</div>
 			</div>
 		</section>
 		<nav id="pagetop" class="pagetop">
