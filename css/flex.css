@@ -533,6 +533,28 @@ footer {
   width: 100%;
 }
 
+/* 固定ページ */
+.page article,
+.page p {
+	text-align: center;
+}
+
+.page h1 {
+	color: #333;
+	text-shadow: initial;/*初期値*/
+}
+
+/* 404 Not Found */
+.error404 article,
+.error404 p {
+	text-align: center;
+}
+
+.error404 h1 {
+	color: #333;
+	text-shadow: initial;
+}
+
 /* PC用スタイル */
 @media screen and (min-width:768px) {
   .inner {
